@@ -2,6 +2,7 @@
 description: "Comprehensive PR review using specialized agents"
 argument-hint: "[review-aspects]"
 allowed-tools: ["Bash", "Glob", "Grep", "Read", "Task"]
+integrations: ["parseltongue"]
 ---
 
 # Comprehensive PR Review
@@ -17,7 +18,10 @@ Run a comprehensive pull request review using multiple specialized agents, each 
    - Parse arguments to see if user requested specific review aspects
    - Default: Run all applicable reviews
 
-2. **Available Review Aspects:**
+2. **Parseltongue Graph Analysis**
+   - If integrations include "parseltongue", run parseltongue-enhancer to generate context for changed entities using --format json and assess blast-radius for PR changes
+
+3. **Available Review Aspects:**
 
    - **comments** - Analyze code comment accuracy and maintainability
    - **tests** - Review test coverage quality and completeness

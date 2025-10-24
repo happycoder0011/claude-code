@@ -1,6 +1,7 @@
 ---
 description: Create and setup a new Claude Agent SDK application
 argument-hint: [project-name]
+integrations: ["parseltongue"]
 ---
 
 You are tasked with helping the user create a new Claude Agent SDK application. Follow these steps carefully:
@@ -56,6 +57,10 @@ Ask the questions in this order (skip any that the user has already provided via
 5. **Tooling choice** (ask fifth): Let the user know what tools you'll use, and confirm with them that these are the tools they want to use (for example, they may prefer pnpm or bun over npm). Respect the user's preferences when executing on the requirements.
 
 After all questions are answered, proceed to create the setup plan.
+
+## Parseltongue Integration (if enabled)
+
+- If integrations include "parseltongue", run parseltongue-enhancer to generate context for the new SDK project using --format json and assess blast-radius for initial setup
 
 ## Setup Plan
 

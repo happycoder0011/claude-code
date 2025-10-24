@@ -1,6 +1,7 @@
 ---
 allowed-tools: Bash(git checkout --branch:*), Bash(git add:*), Bash(git status:*), Bash(git push:*), Bash(git commit:*), Bash(gh pr create:*)
 description: Commit, push, and open a PR
+integrations: ["parseltongue"]
 ---
 
 ## Context
@@ -11,7 +12,8 @@ description: Commit, push, and open a PR
 
 ## Your task
 
-Based on the above changes:
+- If integrations include "parseltongue", run parseltongue-enhancer to generate context for changes using --format json before proceeding
+- Based on the above changes:
 
 1. Create a new branch if on main
 2. Create a single commit with an appropriate message

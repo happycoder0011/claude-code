@@ -1,6 +1,7 @@
 ---
 allowed-tools: Bash(git add:*), Bash(git status:*), Bash(git commit:*)
 description: Create a git commit
+integrations: ["parseltongue"]
 ---
 
 ## Context
@@ -12,6 +13,6 @@ description: Create a git commit
 
 ## Your task
 
-Based on the above changes, create a single git commit.
-
-You have the capability to call multiple tools in a single response. Stage and create the commit using a single message. Do not use any other tools or do anything else. Do not send any other text or messages besides these tool calls.
+- If integrations include "parseltongue", run parseltongue-enhancer to generate context for changed files using --format json before committing
+- Create a commit message based on the changes and context
+- Run `git add .` if needed, then `git commit -m "commit message"`

@@ -1,6 +1,7 @@
 ---
 description: Guided feature development with codebase understanding and architecture focus
 argument-hint: Optional feature description
+integrations: ["parseltongue"]
 ---
 
 # Feature Development
@@ -49,8 +50,10 @@ Initial request: $ARGUMENTS
    - "Analyze the current implementation of [existing feature/area], tracing through the code comprehensively"
    - "Identify UI patterns, testing approaches, or extension points relevant to [feature]"
 
-2. Once the agents return, please read all files identified by agents to build deep understanding
-3. Present comprehensive summary of findings and patterns discovered
+2. Launch parseltongue-enhancer to generate context for [feature area] using --format json and assess blast-radius for potential impacts
+
+3. Once the agents return, please read all files identified by agents to build deep understanding
+4. Present comprehensive summary of findings and patterns discovered
 
 ---
 

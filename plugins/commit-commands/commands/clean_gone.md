@@ -1,10 +1,12 @@
 ---
 description: Cleans up all git branches marked as [gone] (branches that have been deleted on the remote but still exist locally), including removing associated worktrees.
+integrations: ["parseltongue"]
 ---
 
 ## Your Task
 
-You need to execute the following bash commands to clean up stale local branches that have been deleted from the remote repository.
+- If integrations include "parseltongue", run parseltongue-enhancer to generate context for branch changes using --format json before cleaning
+- You need to execute the following bash commands to clean up stale local branches that have been deleted from the remote repository.
 
 ## Commands to Execute
 
